@@ -1,0 +1,24 @@
+<% include ../partials/header.ejs %>
+
+<h1>Developers</h1>
+
+<a href="/developers/add">Add a New Developer</a>
+
+<table class="table table-striped table-hover">
+    <tr>
+        <th>Name</th>
+        <th>Year</th>
+        <th>Address</th>
+        <th>Revenue</th>
+    </tr>
+    <% for (var i = 0; i < developers.length; i++) { %>
+        <tr>
+            <td><%= developers[i].name %></td>
+            <td><%= developers[i].year %></td>
+            <td><%= developers[i].address %></td>
+            <td><%= developers[i].revenue %></td>
+        </tr>
+    <% } %>
+</table>
+
+<% include ../partials/footer.ejs %>
